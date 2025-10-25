@@ -1,0 +1,280 @@
+# ==============================================================================
+# Python .gitignore for Legal RAG Pipeline
+# ==============================================================================
+
+# ==============================================================================
+# 1. PYTHON
+# ==============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+lora_adapters/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ==============================================================================
+# 2. MACHINE LEARNING & AI MODELS (VERY IMPORTANT!)
+# ==============================================================================
+
+# Hugging Face cache - DON'T COMMIT MODELS!
+.cache/
+huggingface/
+models/
+*.bin
+*.safetensors
+*.h5
+*.ckpt
+*.pth
+*.pt
+
+# Model checkpoints
+checkpoints/
+checkpoint/
+saved_models/
+model_cache/
+
+# LoRA adapters - Keep structure but ignore weights
+lora_adapters/**/*.bin
+lora_adapters/**/*.safetensors
+lora_adapters/**/*.pt
+lora_adapters/**/*.pth
+# But keep config files
+!lora_adapters/**/*.json
+!lora_adapters/**/config.json
+!lora_adapters/**/adapter_config.json
+
+# FAISS indices
+*.index
+*.faiss
+legal_faiss.index
+
+# Tokenizers cache
+tokenizers/
+
+# Transformers cache
+transformers_cache/
+
+# Sentence transformers cache
+sentence_transformers/
+
+# TensorFlow
+*.pb
+*.tflite
+saved_model/
+
+# PyTorch Lightning
+lightning_logs/
+
+# Weights & Biases
+wandb/
+
+# ==============================================================================
+# 3. DATA FILES
+# ==============================================================================
+
+# Large datasets
+data/
+datasets/
+*.csv
+*.tsv
+*.jsonl
+*.parquet
+
+# Pickle files
+*.pkl
+*.pickle
+
+# ==============================================================================
+# 4. IDE & EDITORS
+# ==============================================================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+*~
+tags
+.tags
+
+# ==============================================================================
+# 5. OPERATING SYSTEM
+# ==============================================================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ==============================================================================
+# 6. PROJECT SPECIFIC
+# ==============================================================================
+
+# Logs and temporary files
+logs/
+*.log
+temp/
+tmp/
+audit_logs/
+
+# Output files
+output/
+results/
+outputs/
+
+# Test files
+test_output/
+test_results/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# ==============================================================================
+# 7. SECURITY
+# ==============================================================================
+
+# API keys and secrets
+.env
+.env.local
+.env.*.local
+secrets.json
+credentials.json
+*.key
+*.pem
+*.cert
+
+# Hugging Face tokens
+.huggingface/
+hf_token.txt
+
+# ==============================================================================
+# 8. KEEP THESE (Important files to commit)
+# ==============================================================================
+
+# Documentation
+!README.md
+!LICENSE
+!*.md
+
+# Requirements
+!requirements.txt
+!setup.py
+
+# Source code (already included by default)
+!*.py
+
+# Configuration templates
+!config/*.py
+!.gitignore
+!.gitattributes

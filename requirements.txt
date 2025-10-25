@@ -1,0 +1,30 @@
+# Core ML/DL frameworks
+torch>=2.0.0
+transformers>=4.30.0
+sentence-transformers>=2.2.0
+
+# Vector search and retrieval
+faiss-cpu>=1.7.4  # Use faiss-gpu if you have CUDA
+rank-bm25>=0.2.2
+
+# Model optimization
+peft>=0.4.0
+bitsandbytes>=0.41.0  # For quantization (Linux/WSL only)
+accelerate>=0.20.0
+
+# NLP preprocessing
+spacy>=3.6.0
+
+# API clients (optional - only needed if using OpenAI or Claude)
+openai>=1.0.0  # For ChatGPT API
+anthropic>=0.18.0  # For Claude API
+
+# Monitoring and logging
+python-dateutil>=2.8.0
+
+# Data handling
+numpy>=1.24.0
+
+# PDF processing
+pypdf2>=3.0.0
+pdfplumber>=0.10.0  # Alternative PDF parser with better table support
